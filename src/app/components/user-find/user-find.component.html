@@ -9,7 +9,7 @@
 
 </form>
 
-<ng-template *ngIf="result">
+<ng-template [ngIf]="result">
     <table class="table">
         <thead>
             <tr>
@@ -26,7 +26,7 @@
     </table>
 </ng-template>
 
-<ng-template *ngIf="alert">
+<ng-template [ngIf]="alert">
     <div class="alert alert-warning" role="alert">
         Pas de résultat !
     </div>

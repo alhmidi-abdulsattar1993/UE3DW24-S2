@@ -15,8 +15,7 @@ export class UserFindComponent implements OnInit {
     alert = false;
 
     checkoutForm = this.formBuilder.group({
-        firstname: '',
-        lastname: ''
+        id: ''
     });
 
     constructor(private formBuilder: FormBuilder, private usersService: UsersService) { }
