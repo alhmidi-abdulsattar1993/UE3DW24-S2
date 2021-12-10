@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { HeaderComponent } from './general/header/header.component';
-import { UserFindComponent } from './component/user-find/user-find.component';
+import { UserFindComponent } from './components/user-find/user-find.component';
 
 @NgModule({
   declarations: [
