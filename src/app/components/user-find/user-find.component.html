@@ -1,1 +1,33 @@
-<p>user-find works!</p>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+    <label for="id">
+        Id :
+    </label>
+    <input id="id" type="text" formControlName="id">
+
+    <button class="button" type="submit">Rechercher</button>
+
+</form>
+
+<ng-template *ngIf="result">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Prénom</th>
+                <th scope="col">Nom</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
+
+<ng-template *ngIf="alert">
+    <div class="alert alert-warning" role="alert">
+        Pas de résultat !
+    </div>
+</ng-template>

@@ -15,4 +15,21 @@ export class UsersService {
     getAll() {
         return this.http.get<Users[]>(baseUrl + '/users');
     }
+
+    getOne(id: number) {
+        return this.http.get<Users>(baseUrl +'/users/' + id);
+    }
+
+    createUser(user: Users) {
+        return this.http.post<Users>(baseUrl + '/createuser', user);
+    }
+
+    updateUser(user: Users){
+        return this.http.put<Users>(baseUrl + '/updateuser', user);
+    }
+
+    deleteUser(id: number){
+        return this.http.delete<any>(baseUrl + '/deleteuser/' + id);
+    }
+    
 }
