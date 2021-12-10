@@ -1,8 +1,14 @@
-<p>Works</p>
-<div>
-    <ul>
-        <li *ngFor="let user of users">
-            Firstname : {{ user.firstname }} Lastname : {{ user.lastname }}
-        </li>
-    </ul>
-</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Prénom</th>
+        <th scope="col">Nom</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.lastname }}</td>
+      </tr>
+    </tbody>
+  </table>

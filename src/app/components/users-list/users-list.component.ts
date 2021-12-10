@@ -9,11 +9,13 @@ import { UsersService } from '../../services/users.service';
 })
 export class UsersListComponent implements OnInit {
 
+    public isCollapsed = false;
     users?: Users[];
 
     constructor(private usersService: UsersService) { }
 
     ngOnInit(): void {
+        this.getAllUsers();
     }
 
     getAllUsers() {
